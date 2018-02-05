@@ -1,19 +1,28 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.70.2.11706/W32 for ARM                05/Feb/2018  14:26:41
+# IAR ELF Linker V7.70.2.11706/W32 for ARM                05/Feb/2018  17:14:44
 # Copyright 2007-2016 IAR Systems AB.
 #
 #    Output file  =  
-#        D:\01.ES nano track ITI\ST_bluepill\MCAL\GPIO\Debug\Exe\test.out
+#        D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\Exe\test.out
 #    Map file     =  
-#        D:\01.ES nano track ITI\ST_bluepill\MCAL\GPIO\Debug\List\test.map
+#        D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\List\test.map
 #    Command line =  
-#        "D:\01.ES nano track ITI\ST_bluepill\MCAL\GPIO\Debug\Obj\GPIO.o"
-#        "D:\01.ES nano track ITI\ST_bluepill\MCAL\GPIO\Debug\Obj\main.o"
-#        "D:\01.ES nano track ITI\ST_bluepill\MCAL\GPIO\Debug\Obj\RCC.o" -o
-#        "D:\01.ES nano track ITI\ST_bluepill\MCAL\GPIO\Debug\Exe\test.out"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\Obj\GPIO.o"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\Obj\main.o"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\Obj\RCC.o"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\Obj\UART.o" -o
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\Exe\test.out"
 #        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
-#        "D:\01.ES nano track ITI\ST_bluepill\MCAL\GPIO\Debug\List\test.map"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\List\test.map"
 #        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
 #        7.5\arm\config\linker\ST\stm32f103x8.icf" --semihosting --entry
 #        __iar_program_start --vfe
@@ -43,34 +52,36 @@ initialize by copy { rw };
   .intvec            ro code  0x08000000   0x40  vector_table_M.o [4]
                             - 0x08000040   0x40
 
-"P1":                                     0x4bc
-  .text              ro code  0x08000040  0x2e8  GPIO.o [1]
-  .text              ro code  0x08000328   0xac  RCC.o [1]
-  .text              ro code  0x080003d4   0x60  main.o [1]
-  .text              ro code  0x08000434   0x2c  copy_init3.o [4]
-  .text              ro code  0x08000460   0x28  data_init.o [4]
-  .iar.init_table    const    0x08000488   0x14  - Linker created -
-  .text              ro code  0x0800049c   0x1a  cmain.o [4]
-  .text              ro code  0x080004b6    0x4  low_level_init.o [3]
-  .text              ro code  0x080004ba    0x4  exit.o [3]
-  .text              ro code  0x080004be    0x2  vector_table_M.o [4]
-  .text              ro code  0x080004c0    0xa  cexit.o [4]
-  .text              ro code  0x080004cc   0x14  exit.o [5]
-  Initializer bytes  const    0x080004e0   0x10  <for P2-1>
-  .text              ro code  0x080004f0    0xc  cstartup_M.o [4]
-  .rodata            const    0x080004fc    0x0  copy_init3.o [4]
-                            - 0x080004fc  0x4bc
+"P1":                                     0x520
+  .text              ro code  0x08000040  0x268  GPIO.o [1]
+  .text              ro code  0x080002a8  0x118  RCC.o [1]
+  .text              ro code  0x080003c0   0xbc  UART.o [1]
+  .text              ro code  0x0800047c   0x2c  copy_init3.o [4]
+  .text              ro code  0x080004a8   0x28  data_init.o [4]
+  .iar.init_table    const    0x080004d0   0x14  - Linker created -
+  .text              ro code  0x080004e4   0x1a  cmain.o [4]
+  .text              ro code  0x080004fe    0x4  low_level_init.o [3]
+  .text              ro code  0x08000502   0x18  main.o [1]
+  .text              ro code  0x0800051a    0x4  exit.o [3]
+  .text              ro code  0x0800051e    0x2  vector_table_M.o [4]
+  .text              ro code  0x08000520    0xa  cexit.o [4]
+  .text              ro code  0x0800052c   0x14  exit.o [5]
+  Initializer bytes  const    0x08000540   0x14  <for P2-1>
+  .text              ro code  0x08000554    0xc  cstartup_M.o [4]
+  .rodata            const    0x08000560    0x0  copy_init3.o [4]
+                            - 0x08000560  0x520
 
-"P2", part 1 of 2:                         0x10
-  P2-1                        0x20000000   0x10  <Init block>
+"P2", part 1 of 2:                         0x14
+  P2-1                        0x20000000   0x14  <Init block>
     .data            inited   0x20000000    0xc  GPIO.o [1]
     .data            inited   0x2000000c    0x4  RCC.o [1]
-                            - 0x20000010   0x10
+    .data            inited   0x20000010    0x4  UART.o [1]
+                            - 0x20000014   0x14
 
 "P2", part 2 of 2:                        0x800
-  CSTACK                      0x20000010  0x800  <Block>
-    CSTACK           uninit   0x20000010  0x800  <Block tail>
-                            - 0x20000810  0x800
+  CSTACK                      0x20000018  0x800  <Block>
+    CSTACK           uninit   0x20000018  0x800  <Block tail>
+                            - 0x20000818  0x800
 
 
 *******************************************************************************
@@ -80,10 +91,10 @@ initialize by copy { rw };
           Address     Size
           -------     ----
 Copy (__iar_copy_init3)
-    1 source range, total size 0x10:
-          0x080004e0  0x10
-    1 destination range, total size 0x10:
-          0x20000000  0x10
+    1 source range, total size 0x14:
+          0x08000540  0x14
+    1 destination range, total size 0x14:
+          0x20000000  0x14
 
 
 
@@ -93,12 +104,13 @@ Copy (__iar_copy_init3)
 
     Module            ro code  ro data  rw data
     ------            -------  -------  -------
-D:\01.ES nano track ITI\ST_bluepill\MCAL\GPIO\Debug\Obj: [1]
-    GPIO.o                744       12       12
-    RCC.o                 172        4        4
-    main.o                 96
+D:\01.ES nano track ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\Obj: [1]
+    GPIO.o                616       12       12
+    RCC.o                 280        4        4
+    UART.o                188        4        4
+    main.o                 24
     -------------------------------------------
-    Total:              1 012       16       16
+    Total:              1 108       20       20
 
 command line: [2]
     -------------------------------------------
@@ -128,7 +140,7 @@ shb_l.a: [5]
     Gaps                    2
     Linker created                  20    2 048
 -----------------------------------------------
-    Grand Total:        1 240       36    2 064
+    Grand Total:        1 336       40    2 068
 
 
 *******************************************************************************
@@ -137,45 +149,50 @@ shb_l.a: [5]
 
 Entry                      Address   Size  Type      Object
 -----                      -------   ----  ----      ------
-.iar.init_table$$Base   0x08000488          --   Gb  - Linker created -
-.iar.init_table$$Limit  0x0800049c          --   Gb  - Linker created -
-?main                   0x0800049d         Code  Gb  cmain.o [4]
-CSTACK$$Base            0x20000010          --   Gb  - Linker created -
-CSTACK$$Limit           0x20000810          --   Gb  - Linker created -
-GPIO_U8GetPinValue      0x080002f3   0x14  Code  Gb  GPIO.o [1]
+.iar.init_table$$Base   0x080004d0          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x080004e4          --   Gb  - Linker created -
+?main                   0x080004e5         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x20000018          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000818          --   Gb  - Linker created -
 GPIO_voidSetPinDirection
                         0x08000041  0x244  Code  Gb  GPIO.o [1]
-GPIO_voidSetPinValue    0x08000285   0x6e  Code  Gb  GPIO.o [1]
-GPIO_voidSetPullUp      0x08000307   0x1e  Code  Gb  GPIO.o [1]
+GPIO_voidSetPullUp      0x08000285   0x1e  Code  Gb  GPIO.o [1]
 PortBase                0x20000000    0xc  Data  Lc  GPIO.o [1]
 RCC                     0x2000000c    0x4  Data  Lc  RCC.o [1]
-RCC_voidEnableGPIO      0x080003b7   0x18  Code  Gb  RCC.o [1]
-RCC_voidInitSysClock    0x08000329   0x8e  Code  Gb  RCC.o [1]
-Region$$Table$$Base     0x08000488          --   Gb  - Linker created -
-Region$$Table$$Limit    0x0800049c          --   Gb  - Linker created -
-__cmain                 0x0800049d         Code  Gb  cmain.o [4]
-__exit                  0x080004cd   0x14  Code  Gb  exit.o [5]
-__iar_copy_init3        0x08000435   0x2c  Code  Gb  copy_init3.o [4]
-__iar_data_init3        0x08000461   0x28  Code  Gb  data_init.o [4]
-__iar_program_start     0x080004f1         Code  Gb  cstartup_M.o [4]
-__low_level_init        0x080004b7    0x4  Code  Gb  low_level_init.o [3]
+RCC_voidEnableAlternative
+                        0x0800034b   0x12  Code  Lc  RCC.o [1]
+RCC_voidEnableGPIO      0x08000333   0x18  Code  Gb  RCC.o [1]
+RCC_voidEnableUART      0x0800035d   0x60  Code  Gb  RCC.o [1]
+RCC_voidInitSysClock    0x080002a9   0x8a  Code  Gb  RCC.o [1]
+Region$$Table$$Base     0x080004d0          --   Gb  - Linker created -
+Region$$Table$$Limit    0x080004e4          --   Gb  - Linker created -
+UART1                   0x20000010    0x4  Data  Lc  UART.o [1]
+UART1_U8Recive          0x0800044d   0x2a  Code  Gb  UART.o [1]
+UART1_voidInit          0x080003c1   0x82  Code  Gb  UART.o [1]
+UART1_voidSend          0x08000443    0xa  Code  Gb  UART.o [1]
+__cmain                 0x080004e5         Code  Gb  cmain.o [4]
+__exit                  0x0800052d   0x14  Code  Gb  exit.o [5]
+__iar_copy_init3        0x0800047d   0x2c  Code  Gb  copy_init3.o [4]
+__iar_data_init3        0x080004a9   0x28  Code  Gb  data_init.o [4]
+__iar_program_start     0x08000555         Code  Gb  cstartup_M.o [4]
+__low_level_init        0x080004ff    0x4  Code  Gb  low_level_init.o [3]
 __vector_table          0x08000000         Data  Gb  vector_table_M.o [4]
-_call_main              0x080004a9         Code  Gb  cmain.o [4]
-_exit                   0x080004c1         Code  Gb  cexit.o [4]
-_main                   0x080004b3         Code  Gb  cmain.o [4]
-exit                    0x080004bb    0x4  Code  Gb  exit.o [3]
-main                    0x080003d5   0x60  Code  Gb  main.o [1]
+_call_main              0x080004f1         Code  Gb  cmain.o [4]
+_exit                   0x08000521         Code  Gb  cexit.o [4]
+_main                   0x080004fb         Code  Gb  cmain.o [4]
+exit                    0x0800051b    0x4  Code  Gb  exit.o [3]
+main                    0x08000503   0x18  Code  Gb  main.o [1]
 
 
-[1] = D:\01.ES nano track ITI\ST_bluepill\MCAL\GPIO\Debug\Obj
+[1] = D:\01.ES nano track ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\Obj
 [2] = command line
 [3] = dl7M_tln.a
 [4] = rt7M_tl.a
 [5] = shb_l.a
 
-  1 240 bytes of readonly  code memory
-     36 bytes of readonly  data memory
-  2 064 bytes of readwrite data memory
+  1 336 bytes of readonly  code memory
+     40 bytes of readonly  data memory
+  2 068 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

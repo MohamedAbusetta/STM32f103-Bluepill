@@ -28,7 +28,7 @@ stlinkfoundProbes=
 CStepIntDis=_ 0
 LeaveTargetRunning=_ 0
 [DebugChecksum]
-Checksum=1541986759
+Checksum=2138672396
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -95,13 +95,18 @@ ShowTimeLog=1
 SumEnabled=0
 ShowTimeSum=1
 SumSortOrder=0
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Count=0
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
 Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
+[Aliases]
+A0=_ "D:\01.ES nano track ITI\ST_bluepill\DIO.c" "D:\01.ES nano track ITI\ST_bluepill\First code\DIO.c"
+Count=1
+SuppressDialog=1
 [DriverProfiling]
 Enabled=0
 Mode=3
@@ -112,11 +117,6 @@ Exclusions=
 Enabled=0
 [CallStackStripe]
 ShowTiming=1
-[Disassemble mode]
-mode=0
-[Breakpoints2]
-Count=0
-[Aliases]
-A0=_ "D:\01.ES nano track ITI\ST_bluepill\DIO.c" "D:\01.ES nano track ITI\ST_bluepill\First code\DIO.c"
-Count=1
-SuppressDialog=1
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""

@@ -1,5 +1,5 @@
-#ifndef _GPIO_CFG_
-#define _GPIO_CFG_
+#ifndef _UART_CFG_
+#define _UART_CFG_
 
 /* #DEFINES# */
 

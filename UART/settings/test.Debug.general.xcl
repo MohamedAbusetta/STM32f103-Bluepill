@@ -2,7 +2,7 @@
 
 "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armstlink2.dll" 
 
-"D:\01.ES nano track ITI\ST_bluepill\MCAL\GPIO\Debug\Exe\test.out" 
+"D:\01.ES nano track ITI\ST_bluepill\MCAL\STM32f103-Bluepill\UART\Debug\Exe\test.out" 
 
 --plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armbat.dll" 
 

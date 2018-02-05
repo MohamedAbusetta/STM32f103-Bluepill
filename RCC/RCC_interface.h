@@ -20,8 +20,8 @@ extern void RCC_voidDisableGPIO(U8 Gpio);
 /*
  INPUT (Usart) >> is one input from enum USART{}
 */
-extern void RCC_voidEnableUSART (U8 Usart);
-extern void RCC_voidDisableUSART (U8 Usart);
+extern void RCC_voidEnableUART (U8 Usart);
+extern void RCC_voidDisableUART (U8 Usart);
 
 extern void RCC_voidEnableMCO (void);
 #endif

@@ -62,7 +62,7 @@ extern void RCC_voidDisableGPIO(U8 Gpio)
 static void RCC_voidEnableAlternative  (void)
 {
     //Enable GPIO clk
-    _SETBIT(RCC->APB2ENR,_AFIO);
+    _SETBIT(RCC->APE2ENR,_AFIO);
 }
 
 static void RCC_voidDisableAlternative (void)
@@ -71,7 +71,7 @@ static void RCC_voidDisableAlternative (void)
     _CLRBIT(RCC->APB2ENR,_AFIO); 
 }
 
-extern void RCC_voidEnableUSART (U8 Usart)
+extern void RCC_voidEnableUART (U8 Usart)
 {
   //Enable Alternative function clk
   RCC_voidEnableAlternative();
@@ -82,7 +82,7 @@ extern void RCC_voidEnableUSART (U8 Usart)
     //Enable GPIO A clk
     RCC_voidEnableGPIO(PORTA);
     //Enable USART1 clk
-    _SETBIT(RCC->APB2ENR,_USART1EN);
+    _SETBIT(RCC->APE2ENR,_USART1EN);
     break;
     
   case UART_2 ://Usart2
@@ -106,7 +106,7 @@ extern void RCC_voidEnableUSART (U8 Usart)
   
 }
 
-extern void RCC_voidDisableUSART (U8 Usart)
+extern void RCC_voidDisableUART (U8 Usart)
 {
   
   switch (Usart)

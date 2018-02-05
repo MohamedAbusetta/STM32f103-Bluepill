@@ -2318,16 +2318,16 @@
     <name>$PROJ_DIR$\..\Vertical Layer\Datatypes.h</name>
   </file>
   <file>
-    <name>$PROJ_DIR$\GPIO.c</name>
+    <name>$PROJ_DIR$\..\GPIO\GPIO.c</name>
   </file>
   <file>
-    <name>$PROJ_DIR$\GPIO_cfg.h</name>
+    <name>$PROJ_DIR$\..\GPIO\GPIO_cfg.h</name>
   </file>
   <file>
-    <name>$PROJ_DIR$\GPIO_interface.h</name>
+    <name>$PROJ_DIR$\..\GPIO\GPIO_interface.h</name>
   </file>
   <file>
-    <name>$PROJ_DIR$\GPIO_private.h</name>
+    <name>$PROJ_DIR$\..\GPIO\GPIO_private.h</name>
   </file>
   <file>
     <name>$PROJ_DIR$\..\Vertical Layer\Macros.h</name>
@@ -2346,6 +2346,18 @@
   </file>
   <file>
     <name>$PROJ_DIR$\..\RCC\RCC_private.h</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\UART.c</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\UART_cfg.h</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\UART_interface.h</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\UART_private.h</name>
   </file>
 </project>
 

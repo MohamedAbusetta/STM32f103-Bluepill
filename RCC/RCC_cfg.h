@@ -5,8 +5,8 @@
 #define FALSE 0
 
 //System clock configuration (ONLY ONE TRUE AT THE SAME TIME)
-#define HIGH_SPEED_EXTERNAL FALSE   //(TRUE or FALSE) 
-#define HIGH_SPEED_INTERNAL TRUE   //(TRUE or FALSE) 
+#define HIGH_SPEED_EXTERNAL TRUE    //(TRUE or FALSE) 
+#define HIGH_SPEED_INTERNAL FALSE //(TRUE or FALSE) 
 
 /*Select one of system clock values
 >>  8   MHZ
@@ -28,7 +28,7 @@
 >>  72  MHZ  //ONLY AVILABLE in HIGH_SPEED_EXTERNAL
 */
 
-#define SYS_CLOCK_MHZ 32
+#define SYS_CLOCK_MHZ 8
 
 
 #endif
