@@ -2,58 +2,49 @@
 #define _NVIC_INTERFACE_
 
 /* #DEFINES# */
-#define NMI                  0
-#define HardFault            1
-#define MemManage            2
-#define BusFault             3
-#define UsageFault           4
-#define SVC                  5
-#define DebugMon             6
-#define PendSV               7
-#define SysTick              8
-#define WWDG 	             9	
-#define PVD      	     10
-#define TAMPER   	     11
-#define RTC      	     12
-#define FLASH    	     13
-#define RCC      	     14
-#define EXTI0    	     15
-#define EXTI1    	     16
-#define EXTI2    	     17
-#define EXTI3   	     18
-#define EXTI4   	     19
-#define DMA1_Channel1        20
-#define DMA1_Channel2        21
-#define DMA1_Channel3        22
-#define DMA1_Channel4        23
-#define DMA1_Channel5        24
-#define DMA1_Channel6        25
-#define DMA1_Channel7        26
-#define ADC1_2   	     27
-#define USB_HP_CAN1_TX       28
-#define USB_LP_CAN1_RX0      29
-#define CAN1_RX1             30
-#define CAN1_SCE             31
-#define EXTI9_5              32
-#define TIM1_BRK             33
-#define TIM1_UP              34
-#define TIM1_TRG_COM         35
-#define TIM1_CC              36
-#define TIM2                 37
-#define TIM3                 38
-#define TIM4                 39
-#define I2C1_EV              40
-#define I2C1_ER              41
-#define I2C2_EV              42
-#define I2C2_ER              43
-#define SPI1                 44
-#define SPI2                 45
-#define USART1               46
-#define USART2               47
-#define USART3               48
-#define EXTI15_10            49
-#define RTCAlarm             50
-#define USBWakeUp            51
+#define WWDG 	             0
+#define PVD      	     1
+#define TAMPER   	     2
+#define RTC      	     3
+#define FLASH    	     4
+#define RCC      	     5
+#define EXTI0    	     6
+#define EXTI1    	     7
+#define EXTI2    	     8
+#define EXTI3   	     9	
+#define EXTI4   	     10
+#define DMA1_Channel1        11
+#define DMA1_Channel2        12
+#define DMA1_Channel3        13
+#define DMA1_Channel4        14
+#define DMA1_Channel5        15
+#define DMA1_Channel6        16
+#define DMA1_Channel7        17
+#define ADC1_2   	     18
+#define USB_HP_CAN1_TX       19
+#define USB_LP_CAN1_RX0      20
+#define CAN1_RX1             21
+#define CAN1_SCE             22
+#define EXTI9_5              23
+#define TIM1_BRK             24
+#define TIM1_UP              25
+#define TIM1_TRG_COM         26
+#define TIM1_CC              27
+#define TIM2                 28
+#define TIM3                 29
+#define TIM4                 30
+#define I2C1_EV              31
+#define I2C1_ER              32
+#define I2C2_EV              33
+#define I2C2_ER              34
+#define SPI1                 35
+#define SPI2                 36
+#define USART1               37
+#define USART2               38
+#define USART3               39
+#define EXTI15_10            40
+#define RTCAlarm             41
+#define USBWakeUp            42
 
 /* #VARIBLES# */
 
@@ -61,6 +52,7 @@
 /* #FUNCTION_PROTOTYPES# */
 extern void NVIC_voidEnableGlobalInterrupt  (void);
 extern void NVIC_voidDisableGlobalInterrupt (void);
+
 /*
 INPUT(Interrupt_Index) >> select from defines above
 */
