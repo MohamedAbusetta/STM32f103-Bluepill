@@ -22,10 +22,10 @@ struct usart
 static struct usart * UART1 = USART1_BASE;
 
 
-U16 Remain_Bytes ;
-U16 Index_Byte   ;
-U8 *GBuffer;
-U8 Status = 0; // if Status== 0 not Busy
+static U16 Remain_Bytes ;
+static U16 Index_Byte   ;
+static U8 *GBuffer;
+static U8 Status = 0; // if Status== 0 not Busy
 
 /* #FUNCTION_PROTOTYPES# */
 void USART1_IRQHandler(void);
