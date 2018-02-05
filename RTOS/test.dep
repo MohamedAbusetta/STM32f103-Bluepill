@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3892750542</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\GPIO\GPIO_cfg.h</file>
+      <file>$PROJ_DIR$\..\GPIO\GPIO_private.h</file>
+      <file>$PROJ_DIR$\..\GPIO\GPIO.c</file>
+      <file>$PROJ_DIR$\Debug\List\test.map</file>
+      <file>$PROJ_DIR$\Debug\Exe\test.out</file>
+      <file>$TOOLKIT_DIR$\config\linker\ST\stm32f103x8.icf</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\test.pbd</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$PROJ_DIR$\RTOS.c</file>
+      <file>$PROJ_DIR$\RTOS_cfg.h</file>
+      <file>$PROJ_DIR$\RTOS_interface.h</file>
+      <file>$PROJ_DIR$\RTOS_private.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\RTOS.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\RTOS.pbi</file>
+      <file>$PROJ_DIR$\..\Vertical Layer\Macros.h</file>
+      <file>$PROJ_DIR$\..\NVIC\NVIC_interface.h</file>
+      <file>$PROJ_DIR$\..\Vertical Layer\Datatypes.h</file>
+      <file>$PROJ_DIR$\..\SYSTICK\SYSTICK_interface.h</file>
+      <file>$PROJ_DIR$\..\GPIO\GPIO_interface.h</file>
+      <file>$PROJ_DIR$\..\RCC\RCC_interface.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\RCC.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\RCC.pbi</file>
+      <file>$PROJ_DIR$\..\RCC\RCC.c</file>
+      <file>$PROJ_DIR$\..\RCC\RCC_cfg.h</file>
+      <file>$PROJ_DIR$\..\RCC\RCC_private.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\GPIO.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\GPIO.o</file>
+      <file>$PROJ_DIR$\..\SYSTICK\SYSTICK.c</file>
+      <file>$PROJ_DIR$\..\SYSTICK\SYSTICK_cfg.h</file>
+      <file>$PROJ_DIR$\..\SYSTICK\SYSTICK_private.h</file>
+      <file>$PROJ_DIR$\..\NVIC\NVIC_cfg.h</file>
+      <file>$PROJ_DIR$\..\NVIC\NVIC.c</file>
+      <file>$PROJ_DIR$\..\NVIC\cstartup_M.c</file>
+      <file>$PROJ_DIR$\..\NVIC\NVIC_private.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\SYSTICK.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\SYSTICK.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\NVIC.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\cstartup_M.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\NVIC.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\cstartup_M.pbi</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 4 3</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\GPIO\GPIO.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 32</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 24 20 0 1</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1 20 24 0 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\test.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 5 43 32 10 44 26 18 40 13 8 12 11</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 20 16 24 25</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25 16 20 24 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\RTOS.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 16 23 20 15 17</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 16 23 20 15 17</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\RCC\RCC.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 25 20 29 30</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 25 20 29 30</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\SYSTICK\SYSTICK.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 40</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 23 21 20 34 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 34 21 23 20 22 35</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\NVIC\NVIC.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 44</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22 21 20 36 39</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39 20 21 36 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\NVIC\cstartup_M.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 43</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+      </outputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

@@ -1,0 +1,328 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.2.11706/W32 for ARM                05/Feb/2018  20:53:28
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Exe\test.out
+#    Map file     =  
+#        D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\List\test.map
+#    Command line =  
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Obj\cstartup_M.o"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Obj\GPIO.o"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Obj\main.o"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Obj\NVIC.o"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Obj\RCC.o"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Obj\RTOS.o"
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Obj\SYSTICK.o" -o
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Exe\test.out"
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
+#        "D:\01.ES nano track
+#        ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\List\test.map"
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\config\linker\ST\stm32f103x8.icf" --semihosting --entry
+#        __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0800ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20004fff] { rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind        Address   Size  Object
+  -------            ----        -------   ----  ------
+"A0":                                     0x108
+  .intvec            const    0x08000000  0x108  cstartup_M.o [1]
+                            - 0x08000108  0x108
+
+"P1":                                     0x615
+  .text              ro code  0x08000108  0x2b8  GPIO.o [1]
+  .text              ro code  0x080003c0   0xc4  RTOS.o [1]
+  .text              ro code  0x08000484   0x54  SYSTICK.o [1]
+  .text              ro code  0x080004d8   0xa8  RCC.o [1]
+  .text              ro code  0x08000580   0x54  main.o [1]
+  .text              ro code  0x080005d4   0x38  packbits_init_single.o [4]
+  .text              ro code  0x0800060c   0x28  data_init.o [4]
+  .iar.init_table    const    0x08000634   0x10  - Linker created -
+  .text              ro code  0x08000644   0x1a  cmain.o [4]
+  .text              ro code  0x0800065e    0x4  low_level_init.o [3]
+  .text              ro code  0x08000662    0x4  exit.o [3]
+  .text              ro code  0x08000666    0x2  cstartup_M.o [1]
+  .text              ro code  0x08000668    0xa  cexit.o [4]
+  .text              ro code  0x08000672    0x2  cstartup_M.o [1]
+  .text              ro code  0x08000674   0x14  exit.o [5]
+  .text              ro code  0x08000688   0x10  cstartup_M.o [1]
+  .rodata            const    0x08000698    0xc  main.o [1]
+  .text              ro code  0x080006a4    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006a6    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006a8    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006aa    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006ac    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006ae    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006b0    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006b2    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006b4    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006b6    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006b8    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006ba    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006bc    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006be    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006c0    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006c2    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006c4    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006c6    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006c8    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006ca    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006cc    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006ce    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006d0    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006d2    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006d4    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006d6    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006d8    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006da    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006dc    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006de    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006e0    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006e2    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006e4    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006e6    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006e8    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006ea    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006ec    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006ee    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006f0    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006f2    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006f4    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006f6    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006f8    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006fa    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006fc    0x2  cstartup_M.o [1]
+  .text              ro code  0x080006fe    0x2  cstartup_M.o [1]
+  .text              ro code  0x08000700    0x2  cstartup_M.o [1]
+  .text              ro code  0x08000702    0x2  cstartup_M.o [1]
+  .text              ro code  0x08000704    0x2  cstartup_M.o [1]
+  .rodata            const    0x08000706    0x0  packbits_init_single.o [4]
+  Initializer bytes  const    0x08000706   0x17  <for P2-1>
+                            - 0x0800071d  0x615
+
+"P2", part 1 of 2:                         0x2e
+  P2-1                        0x20000000   0x2e  <Init block>
+    .data            inited   0x20000000    0xc  GPIO.o [1]
+    .data            inited   0x2000000c    0x4  RCC.o [1]
+    .data            inited   0x20000010    0x4  SYSTICK.o [1]
+    .bss             inited   0x20000014   0x14  RTOS.o [1]
+    .bss             inited   0x20000028    0x4  SYSTICK.o [1]
+    .bss             inited   0x2000002c    0x1  RTOS.o [1]
+    .bss             inited   0x2000002d    0x1  RTOS.o [1]
+                            - 0x2000002e   0x2e
+
+"P2", part 2 of 2:                        0x800
+  CSTACK                      0x20000030  0x800  <Block>
+    CSTACK           uninit   0x20000030  0x800  <Block tail>
+                            - 0x20000830  0x800
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x17 (50% of destination):
+          0x08000706  0x17
+    1 destination range, total size 0x2e:
+          0x20000000  0x2e
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+D:\01.ES nano track ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Obj: [1]
+    GPIO.o                      696        6       12
+    RCC.o                       168        2        4
+    RTOS.o                      196       11       22
+    SYSTICK.o                    84        4        8
+    cstartup_M.o                118      264
+    main.o                       84       12
+    -------------------------------------------------
+    Total:                    1 346      299       46
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    exit.o                        4
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                        8
+
+rt7M_tl.a: [4]
+    cexit.o                      10
+    cmain.o                      26
+    data_init.o                  40
+    packbits_init_single.o       56
+    -------------------------------------------------
+    Total:                      132
+
+shb_l.a: [5]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Linker created                        16    2 048
+-----------------------------------------------------
+    Grand Total:              1 506      315    2 094
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x08000634          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08000644          --   Gb  - Linker created -
+?main                   0x08000645         Code  Gb  cmain.o [4]
+ADC1_2_IRQHandler       0x080006d5    0x2  Code  Wk  cstartup_M.o [1]
+BusFault_Handler        0x080006a7    0x2  Code  Wk  cstartup_M.o [1]
+CAN1_RX1_IRQHandler     0x080006db    0x2  Code  Wk  cstartup_M.o [1]
+CAN1_SCE_IRQHandler     0x080006dd    0x2  Code  Wk  cstartup_M.o [1]
+CSTACK$$Base            0x20000030          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000830          --   Gb  - Linker created -
+DMA1_Channel1_IRQHandler
+                        0x080006c7    0x2  Code  Wk  cstartup_M.o [1]
+DMA1_Channel2_IRQHandler
+                        0x080006c9    0x2  Code  Wk  cstartup_M.o [1]
+DMA1_Channel3_IRQHandler
+                        0x080006cb    0x2  Code  Wk  cstartup_M.o [1]
+DMA1_Channel4_IRQHandler
+                        0x080006cd    0x2  Code  Wk  cstartup_M.o [1]
+DMA1_Channel5_IRQHandler
+                        0x080006cf    0x2  Code  Wk  cstartup_M.o [1]
+DMA1_Channel6_IRQHandler
+                        0x080006d1    0x2  Code  Wk  cstartup_M.o [1]
+DMA1_Channel7_IRQHandler
+                        0x080006d3    0x2  Code  Wk  cstartup_M.o [1]
+DebugMon_Handler        0x080006ad    0x2  Code  Wk  cstartup_M.o [1]
+EXTI0_IRQHandler        0x080006bd    0x2  Code  Wk  cstartup_M.o [1]
+EXTI15_10_IRQHandler    0x08000701    0x2  Code  Wk  cstartup_M.o [1]
+EXTI1_IRQHandler        0x080006bf    0x2  Code  Wk  cstartup_M.o [1]
+EXTI2_IRQHandler        0x080006c1    0x2  Code  Wk  cstartup_M.o [1]
+EXTI3_IRQHandler        0x080006c3    0x2  Code  Wk  cstartup_M.o [1]
+EXTI4_IRQHandler        0x080006c5    0x2  Code  Wk  cstartup_M.o [1]
+EXTI9_5_IRQHandler      0x080006df    0x2  Code  Wk  cstartup_M.o [1]
+FLASH_IRQHandler        0x080006b9    0x2  Code  Wk  cstartup_M.o [1]
+GPIO_voidSetPinDirection
+                        0x08000109  0x244  Code  Gb  GPIO.o [1]
+GPIO_voidSetPinValue    0x0800034d   0x6e  Code  Gb  GPIO.o [1]
+GPtr                    0x20000028    0x4  Data  Lc  SYSTICK.o [1]
+HardFault_Handler       0x08000673    0x2  Code  Wk  cstartup_M.o [1]
+I2C1_ER_IRQHandler      0x080006f1    0x2  Code  Wk  cstartup_M.o [1]
+I2C1_EV_IRQHandler      0x080006ef    0x2  Code  Wk  cstartup_M.o [1]
+I2C2_ER_IRQHandler      0x080006f5    0x2  Code  Wk  cstartup_M.o [1]
+I2C2_EV_IRQHandler      0x080006f3    0x2  Code  Wk  cstartup_M.o [1]
+LED_runable             0x08000581    0xe  Code  Gb  main.o [1]
+MemManage_Handler       0x080006a5    0x2  Code  Wk  cstartup_M.o [1]
+NMI_Handler             0x08000667    0x2  Code  Wk  cstartup_M.o [1]
+OS_Flag                 0x2000002d    0x1  Data  Lc  RTOS.o [1]
+PVD_IRQHandler          0x080006b3    0x2  Code  Wk  cstartup_M.o [1]
+PendSV_Handler          0x080006af    0x2  Code  Wk  cstartup_M.o [1]
+PortBase                0x20000000    0xc  Data  Lc  GPIO.o [1]
+RCC                     0x2000000c    0x4  Data  Lc  RCC.o [1]
+RCC_IRQHandler          0x080006bb    0x2  Code  Wk  cstartup_M.o [1]
+RCC_voidEnableGPIO      0x08000563   0x18  Code  Gb  RCC.o [1]
+RCC_voidInitSysClock    0x080004d9   0x8a  Code  Gb  RCC.o [1]
+RTCAlarm_IRQHandler     0x08000703    0x2  Code  Wk  cstartup_M.o [1]
+RTC_IRQHandler          0x080006b7    0x2  Code  Wk  cstartup_M.o [1]
+RTOS_voidCreateTask     0x080003f1   0x14  Code  Gb  RTOS.o [1]
+RTOS_voidEnable         0x080003e9    0x8  Code  Lc  RTOS.o [1]
+RTOS_voidInit           0x080003c1   0x28  Code  Gb  RTOS.o [1]
+RTOS_voidSchedular      0x08000405   0x5e  Code  Lc  RTOS.o [1]
+RTOS_voidStart          0x08000463   0x16  Code  Gb  RTOS.o [1]
+Region$$Table$$Base     0x08000634          --   Gb  - Linker created -
+Region$$Table$$Limit    0x08000644          --   Gb  - Linker created -
+SPI1_IRQHandler         0x080006f7    0x2  Code  Wk  cstartup_M.o [1]
+SPI2_IRQHandler         0x080006f9    0x2  Code  Wk  cstartup_M.o [1]
+SVC_Handler             0x080006ab    0x2  Code  Wk  cstartup_M.o [1]
+SYSCLK                  0x20000010    0x4  Data  Lc  SYSTICK.o [1]
+SYSTICK_voidInit        0x08000485   0x3c  Code  Gb  SYSTICK.o [1]
+SYSTICK_voidSetHandler  0x080004c1    0x6  Code  Gb  SYSTICK.o [1]
+SysTick_Handler         0x080004c7    0xa  Code  Gb  SYSTICK.o [1]
+Sys_Tasks               0x20000014   0x14  Data  Lc  RTOS.o [1]
+TAMPER_IRQHandler       0x080006b5    0x2  Code  Wk  cstartup_M.o [1]
+TIM1_BRK_IRQHandler     0x080006e1    0x2  Code  Wk  cstartup_M.o [1]
+TIM1_CC_IRQHandler      0x080006e7    0x2  Code  Wk  cstartup_M.o [1]
+TIM1_TRG_COM_IRQHandler
+                        0x080006e5    0x2  Code  Wk  cstartup_M.o [1]
+TIM1_UP_IRQHandler      0x080006e3    0x2  Code  Wk  cstartup_M.o [1]
+TIM2_IRQHandler         0x080006e9    0x2  Code  Wk  cstartup_M.o [1]
+TIM3_IRQHandler         0x080006eb    0x2  Code  Wk  cstartup_M.o [1]
+TIM4_IRQHandler         0x080006ed    0x2  Code  Wk  cstartup_M.o [1]
+Task_Number             0x2000002c    0x1  Data  Lc  RTOS.o [1]
+USART1_IRQHandler       0x080006fb    0x2  Code  Wk  cstartup_M.o [1]
+USART2_IRQHandler       0x080006fd    0x2  Code  Wk  cstartup_M.o [1]
+USART3_IRQHandler       0x080006ff    0x2  Code  Wk  cstartup_M.o [1]
+USBWakeUp_IRQHandler    0x08000705    0x2  Code  Wk  cstartup_M.o [1]
+USB_HP_CAN1_TX_IRQHandler
+                        0x080006d7    0x2  Code  Wk  cstartup_M.o [1]
+USB_LP_CAN1_RX0_IRQHandler
+                        0x080006d9    0x2  Code  Wk  cstartup_M.o [1]
+UsageFault_Handler      0x080006a9    0x2  Code  Wk  cstartup_M.o [1]
+WWDG_IRQHandler         0x080006b1    0x2  Code  Wk  cstartup_M.o [1]
+__cmain                 0x08000645         Code  Gb  cmain.o [4]
+__exit                  0x08000675   0x14  Code  Gb  exit.o [5]
+__iar_data_init3        0x0800060d   0x28  Code  Gb  data_init.o [4]
+__iar_packbits_init_single3
+                        0x080005d5   0x38  Code  Gb  packbits_init_single.o [4]
+__iar_program_start     0x08000689   0x10  Code  Gb  cstartup_M.o [1]
+__low_level_init        0x0800065f    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000  0x108  Data  Gb  cstartup_M.o [1]
+_call_main              0x08000651         Code  Gb  cmain.o [4]
+_exit                   0x08000669         Code  Gb  cexit.o [4]
+_main                   0x0800065b         Code  Gb  cmain.o [4]
+exit                    0x08000663    0x4  Code  Gb  exit.o [3]
+main                    0x0800058f   0x40  Code  Gb  main.o [1]
+
+
+[1] = D:\01.ES nano track ITI\ST_bluepill\MCAL\STM32f103-Bluepill\RTOS\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  1 506 bytes of readonly  code memory
+    315 bytes of readonly  data memory
+  2 094 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

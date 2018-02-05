@@ -8,9 +8,9 @@
 
 
 /* #FUNCTION_PROTOTYPES# */
-extern void SYSCLK_voidInit (void);
-extern U32 SYSCLK_U32GetVal (void);
-extern void SYSCLK_voidSetHandler (void (* Ptr) (void));
+extern void SYSTICK_voidInit (void);
+extern U32 SYSTICK_U32GetVal (void);
+extern void SYSTICK_voidSetHandler (void (* Ptr) (void));
 
 
 #endif
