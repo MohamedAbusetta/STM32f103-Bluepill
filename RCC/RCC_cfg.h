@@ -28,7 +28,7 @@
 >>  72  MHZ  //ONLY AVILABLE in HIGH_SPEED_EXTERNAL
 */
 
-#define SYS_CLOCK_MHZ 8
+#define  SYS_CLOCK_MHZ 8
 
 
 #endif
