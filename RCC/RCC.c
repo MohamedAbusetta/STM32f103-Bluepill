@@ -80,21 +80,21 @@ extern void RCC_voidEnableUART (U8 Usart)
   {
   case UART_1 ://Usart1
     //Enable GPIO A clk
-    RCC_voidEnableGPIO(PORTA);
+    RCC_voidEnableGPIO(PORTA_RCC);
     //Enable USART1 clk
     _SETBIT(RCC->APE2ENR,_USART1EN);
     break;
     
   case UART_2 ://Usart2
      //Enable GPIO A clk
-    RCC_voidEnableGPIO(PORTA);
+    RCC_voidEnableGPIO(PORTA_RCC);
     //Enable USART2 clk
     _SETBIT(RCC->APB1ENR,_USART2EN); 
     break;
     
   case UART_3://Usart3
     //Enable GPIO B clk
-    RCC_voidEnableGPIO(PORTB);
+    RCC_voidEnableGPIO(PORTB_RCC);
     //Enable USART3 clk
     _SETBIT(RCC->APB1ENR,_USART3EN);
     break;
@@ -132,7 +132,14 @@ extern void RCC_voidDisableUART (U8 Usart)
   }
   
 }
-
+extern void RCC_voidEnableTIM2 (void)
+{
+  //enable TIM2 
+  _SETBIT(RCC->APE1ENR,0);
+  //enable alternative function
+  RCC_voidEnableAlternative();
+    
+}
 extern void RCC_voidEnableMCO (void)
 {
   //enable MCO  

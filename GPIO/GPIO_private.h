@@ -35,7 +35,6 @@
 
 /* #VARIBLES# */
 
-enum PORTS{PORTA,PORTB,PORTC,PORTD,PORTE,PORTF,PORTG};
 
 struct gpio 
 {

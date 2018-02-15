@@ -14,7 +14,7 @@
 extern void UART1_voidInit (void)
 {
   //Enable clk
-  RCC_voidEnableGPIO(PORTA);  //Port A
+  RCC_voidEnableGPIO(PORTA_RCC);  //Port A
   RCC_voidEnableUART(UART_1); //Uart and alternative function
   
   GPIO_voidSetPinDirection(PORTA,PIN10,INPUT,IN_PULLUD); //RX input pull up
