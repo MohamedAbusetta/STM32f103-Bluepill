@@ -1,9 +1,9 @@
-#include "../Vertical Layer/Datatypes.h"
+#include "../Vertical layer/Datatypes.h"
 
 #include "RCC_interface.h"
 
 //Vertical Layer libs
-#include "../Vertical Layer/Macros.h"
+#include "../Vertical layer/Macros.h"
 
 #include "RCC_cfg.h"
 #include "RCC_private.h"
@@ -45,9 +45,52 @@ _SETBIT(RCC->CFGR,_PLLSRC); //Enable PLLSRC to HSE
         
  _SETBIT(RCC->CR,_PLLON); //Enable PLL on
  while(!_GETBIT(RCC->CR,_PLLRDY));     
+ 
+
+#if _RCC_ENABLE_PORT_A       == ENABLE  
+RCC_voidEnableGPIO(PORTA_RCC);
+#endif
+#if _RCC_ENABLE_PORT_B       == ENABLE  
+RCC_voidEnableGPIO(PORTB_RCC);
+#endif
+#if _RCC_ENABLE_PORT_C       == ENABLE 
+RCC_voidEnableGPIO(PORTC_RCC);
+#endif
+#if _RCC_ENABLE_ALTERNATIVE  == ENABLE 
+RCC_voidEnableAlternative();
+ #endif
+#if _RCC_ENABLE_UART_1       == ENABLE 
+RCC_voidEnableUART(UART_1);
+ #endif
+#if _RCC_ENABLE_UART_2       == ENABLE 
+RCC_voidEnableUART(UART_2);
+ #endif
+#if _RCC_ENABLE_UART_3       == ENABLE 
+RCC_voidEnableUART(UART_3);
+ #endif                   
+
+#if _RCC_ENABLE_TIMER_2      == ENABLE 
+RCC_voidEnableTIM2();
+#endif
+
+#if _RCC_ENABLE_TIMER_3      == ENABLE 
+RCC_voidEnableTIM3();
+#endif       
+
+#if _RCC_ENABLE_SPI_1        == ENABLE  
+RCC_voidEnableSPI1();
+#endif     
+
+#if _RCC_ENABLE_MCO          == ENABLE 
+RCC_voidEnableMCO();
+#endif
+ 
+ 
+ 
+ 
 }
 
-extern void RCC_voidEnableGPIO(U8 Gpio)
+static void RCC_voidEnableGPIO(U8 Gpio)
 {
   //Enable GPIO clk
     _SETBIT(RCC->APE2ENR,Gpio +2);    
@@ -65,16 +108,16 @@ static void RCC_voidEnableAlternative  (void)
     _SETBIT(RCC->APE2ENR,_AFIO);
 }
 
-static void RCC_voidDisableAlternative (void)
+extern void RCC_voidDisableAlternative (void)
 {
     //Disable GPIO clk
     _CLRBIT(RCC->APB2ENR,_AFIO); 
 }
 
-extern void RCC_voidEnableUART (U8 Usart)
+static void RCC_voidEnableUART (U8 Usart)
 {
   //Enable Alternative function clk
-  RCC_voidEnableAlternative();
+  //RCC_voidEnableAlternative();
   
   switch (Usart)
   {
@@ -132,15 +175,31 @@ extern void RCC_voidDisableUART (U8 Usart)
   }
   
 }
-extern void RCC_voidEnableTIM2 (void)
+
+static void RCC_voidEnableSPI1 (void)
+{
+  //RCC_voidEnableAlternative();
+    //Enable USART3 clk
+    _SETBIT(RCC->APE2ENR,12);
+}
+
+static void RCC_voidEnableTIM2 (void)
 {
   //enable TIM2 
   _SETBIT(RCC->APE1ENR,0);
   //enable alternative function
-  RCC_voidEnableAlternative();
+  //RCC_voidEnableAlternative();
     
 }
-extern void RCC_voidEnableMCO (void)
+static void RCC_voidEnableTIM3 (void)
+{
+  //enable TIM3
+  _SETBIT(RCC->APE1ENR,1);
+  //enable alternative function
+  //RCC_voidEnableAlternative();
+
+}
+static void RCC_voidEnableMCO (void)
 {
   //enable MCO  
     RCC->CFGR |= (4<<24);

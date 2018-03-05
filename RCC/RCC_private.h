@@ -53,7 +53,25 @@ static struct rcc * RCC = _RCC_BASE;
 /* #FUNCTION_PROTOTYPES# */
 
 static void RCC_voidEnableAlternative  (void);
-static void RCC_voidDisableAlternative (void);
+
+/*
+ INPUT (Gpio) >> is one input from enum PORTS_RCC{}
+*/
+static void RCC_voidEnableGPIO(U8 Gpio);
+
+
+/*
+ INPUT (Usart) >> is one input from enum USART{}
+*/
+static void RCC_voidEnableUART (U8 Usart);
+
+
+static void RCC_voidEnableTIM2 (void);
+static void RCC_voidEnableTIM3 (void);
+
+static void RCC_voidEnableMCO (void);
+
+static void RCC_voidEnableSPI1 (void);
 
 
 #endif
