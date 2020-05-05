@@ -12,7 +12,7 @@
 
 
 
-extern void SYSTICK_voidInit (void)
+extern void SYSCLK_voidInit (void)
 {
   
   //Set Reload reg
@@ -29,14 +29,14 @@ extern void SYSTICK_voidInit (void)
   
 }
 
-extern U32 SYSTICK_U32GetVal (void)
+extern U32 SYSCLK_U32GetVal (void)
 {
  U32 RetVal = SYSCLK->VAL ; 
  return RetVal;
 }
 
 
-extern void SYSTICK_voidSetHandler (void (* Ptr) (void))
+extern void SYSCLK_voidSetHandler (void (* Ptr) (void))
 {
   GPtr = Ptr;
 }
